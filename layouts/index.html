@@ -1,17 +1,18 @@
 {{ partial "header.html" . }}
 
-<section id=content>
-  <ul class=posts_listing>
+<section class="posts pd-20 max-tablet">
+  <ul>
     {{ range .Data.Pages.ByPublishDate.Reverse }}
+<a href="{{ .Permalink }}">
       <li>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div id=date>
-          <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
-        </div>
+        <h2>{{ .Title }}</h2>
+        <p>
+          <time>{{  .PublishDate.Format "January 2, 2006"}}</time>
+        </p>
       </li>
+</a>
     {{ end }}
   </ul>
 </section>
 
-{{ partial "footer.html" . }}
 

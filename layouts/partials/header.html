@@ -9,8 +9,6 @@
     <meta name="referrer" content="no-referrer">
     {{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Old+Standard+TT:400' rel='stylesheet' type='text/css'>
-
     <link rel="icon" type="image/png" href="/favicon_16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
@@ -33,11 +31,15 @@
   </head>
 
   <body>
-    <section id=nav>
-      <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
+    <header class="pd-20 max-tablet website-header">
+      <a href="/"><h1>{{ .Site.Params.sitename }}</h1></a>
+      
+<nav>
       <ul>
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
-    </section>
+    </nav>
+    </header>
+    
