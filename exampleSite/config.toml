@@ -1,6 +1,6 @@
-baseurl = "https://www.example.com/"
+baseurl = "/"
 title = "Black & Light"
-author = "David Hamp-Gonsalves"
+author = "David Hamp-Gonsalves & Ranfdev"
 canonifyurls = true
 languagecode = "en"
 theme = "black-and-light"
